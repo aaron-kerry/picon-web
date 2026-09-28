@@ -7,6 +7,7 @@ import { FaqAndContact } from "@/components/FaqAndContact";
 import { Footer } from "@/components/Footer";
 import { PlayStoreButton } from "@/components/PlayStoreButton";
 import { PricingSection } from "@/components/PricingSection";
+import { SideGalleries } from "@/components/SideGalleries";
 import {
   ArrowDown,
   CheckCircle2,
@@ -26,8 +27,11 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#F8FAFC] text-[#1A1A1A] flex flex-col">
+    <div className="relative min-h-screen bg-[#F8FAFC] text-[#1A1A1A] flex flex-col overflow-x-hidden">
       <Navbar onOpenApp={jumpToApp} />
+
+      {/* Colonnes décoratives de cadres sur les côtés (grands écrans uniquement) */}
+      <SideGalleries />
 
       <main className="relative z-10">
         <section className="relative pt-12 pb-20 sm:pt-20 sm:pb-32 overflow-hidden">
@@ -116,7 +120,6 @@ export default function Home() {
               {/* Preview vidéo */}
               <div className="lg:col-span-5 relative">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#E5E5E5] bg-gradient-to-br from-[#0A3D91] via-[#1E40AF] to-[#062B66] min-h-[480px] sm:min-h-[560px]">
-                  {/* TODO Étape B : remplacer par <img src="/images/hero_app_preview.png" ... /> */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
                   <div className="relative z-10 min-h-[480px] sm:min-h-[560px] flex flex-col items-center justify-center text-center p-8">
                     <div className="w-20 h-20 rounded-full bg-white/15 border border-white/40 backdrop-blur-md flex items-center justify-center mb-6 shadow-2xl">

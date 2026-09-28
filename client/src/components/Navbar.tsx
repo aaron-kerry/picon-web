@@ -24,14 +24,14 @@ export function Navbar({ onOpenApp }: NavbarProps) {
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md border-b border-[#E5E5E5] py-3 shadow-sm"
-          : "bg-white border-b border-[#F0F0F0] py-4"
+          : "bg-white border-b border-[#F0F0F0] py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-5">
           <a
             href="#"
-            className="flex items-center gap-4 group shrink-0"
+            className="flex items-center group shrink-0"
             aria-label="PICON, accueil"
           >
             <PiconLogo
@@ -40,9 +40,6 @@ export function Navbar({ onOpenApp }: NavbarProps) {
               theme="light"
               className="transition-transform group-hover:scale-[1.02]"
             />
-            <span className="hidden xl:inline-block text-[11px] font-mono text-[#666666] border-l border-[#E5E5E5] pl-4 uppercase tracking-wider">
-              Laboratoire Digital • Togo
-            </span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-[#1A1A1A]">
