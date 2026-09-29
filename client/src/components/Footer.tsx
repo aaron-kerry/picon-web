@@ -33,7 +33,7 @@ export function Footer() {
             <div className="flex flex-col items-start gap-3">
               <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden">
                 <img
-                  src="/images/pro.png"
+                  src="/images/pro_footer.png"
                   alt="PICON"
                   className="w-full h-full object-contain p-1"
                 />

@@ -6,16 +6,20 @@ interface PiconLogoProps {
 }
 
 const logoSizes = {
-  sm: "w-[44px] sm:w-[48px]",
-  md: "w-[56px] sm:w-[60px]",
-  lg: "w-[80px] sm:w-[92px]",
+  sm: "w-[96px] sm:w-[104px]",
+  md: "w-[144px] sm:w-[160px]",
+  lg: "w-[192px] sm:w-[224px]",
 };
 
+
+
 const taglineSizes = {
-  sm: "text-[7px]",
-  md: "text-[8px] sm:text-[9px]",
-  lg: "text-[10px] sm:text-[11px]",
+  sm: "text-[12px]",
+  md: "text-[14px] sm:text-[16px]",
+  lg: "text-[18px] sm:text-[20px]",
 };
+
+
 
 export function PiconLogo({
   className = "",

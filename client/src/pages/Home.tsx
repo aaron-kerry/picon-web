@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#F8FAFC] text-[#1A1A1A] flex flex-col overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#F8FAFC] text-[#1A1A1A] flex flex-col overflow-x-clip">
       <Navbar onOpenApp={jumpToApp} />
 
       {/* Colonnes décoratives de cadres sur les côtés (grands écrans uniquement) */}
