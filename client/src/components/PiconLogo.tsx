@@ -12,13 +12,11 @@ const logoSizes = {
 };
 
 
-
 const taglineSizes = {
   sm: "text-[12px]",
   md: "text-[14px] sm:text-[16px]",
   lg: "text-[18px] sm:text-[20px]",
 };
-
 
 
 export function PiconLogo({
@@ -27,7 +25,8 @@ export function PiconLogo({
   withTagline = true,
   theme = "dark",
 }: PiconLogoProps) {
-  const taglineColor = theme === "dark" ? "text-white/70" : "text-[#666666]";
+  const taglineColor =
+    theme === "dark" ? "text-white/60" : "text-[#666666]";
 
   return (
     <div className={`flex flex-col items-start gap-1 ${className}`}>
@@ -37,10 +36,9 @@ export function PiconLogo({
         className={`${logoSizes[size]} h-auto object-contain object-left`}
       />
       {withTagline && (
-      <span
-        className={`pl-1 font-medium tracking-[0.15em] uppercase ${taglineColor} ${taglineSizes[size]}`}
-        style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 500 }}
-      >
+        <span
+          className={`pl-1 font-medium tracking-[0.15em] uppercase ${taglineColor} ${taglineSizes[size]}`}
+        >
           Ce qui compte vraiment
         </span>
       )}

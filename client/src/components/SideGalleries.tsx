@@ -1,7 +1,6 @@
 /**
  * Colonnes décoratives de cadres photo sur les côtés du site.
- * z-20 = au-dessus de <main> (z-10) mais pointer-events-none = non cliquable.
- * Affichées sur grands écrans uniquement (>= 1280px) pour ne pas gêner le contenu.
+ * Adaptées au thème dark glassmorphique.
  */
 
 interface SideGalleriesProps {
@@ -36,9 +35,9 @@ function PhotoFrame({
       className="relative group transition-transform duration-500 hover:scale-105"
       style={{ transform: `rotate(${rotate}deg)` }}
     >
-      {/* Cadre blanc avec effet passe-partout */}
-      <div className="bg-white rounded-lg p-1.5 shadow-[0_8px_24px_-6px_rgba(10,61,145,0.22)] border border-[#E5E5E5]">
-        <div className="w-full aspect-[4/5] overflow-hidden rounded-sm bg-[#F8FAFC]">
+      {/* Cadre glass sur fond noir */}
+      <div className="bg-white/[0.06] backdrop-blur-xl rounded-lg p-1.5 border border-white/15 shadow-[0_8px_24px_-6px_rgba(0,0,0,0.6)]">
+        <div className="w-full aspect-[4/5] overflow-hidden rounded-sm bg-[#1A1C20]">
           <img
             src={src}
             alt=""
@@ -49,7 +48,7 @@ function PhotoFrame({
         </div>
       </div>
       {/* Reflet subtil */}
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
     </div>
   );
 }

@@ -16,10 +16,10 @@ export function PlayStoreButton({
 }: PlayStoreButtonProps) {
   const variantClasses = {
     solid:
-      "bg-[#0A3D91] text-white hover:bg-[#062B66] shadow-lg shadow-[#0A3D91]/20",
+      "bg-[#1AB5A3] text-white hover:bg-[#17A090] shadow-lg shadow-[#1AB5A3]/25",
     outline:
-      "bg-white text-[#0A3D91] border border-[#0A3D91]/20 hover:border-[#0A3D91] hover:bg-[#0A3D91]/5",
-    dark: "bg-[#062B66] text-white hover:bg-[#0A3D91]",
+      "bg-transparent text-[#1A1A1A] border border-[#1A1A1A]/20 hover:border-[#1AB5A3] hover:bg-[#1AB5A3]/5",
+    dark: "bg-[#0A1F44] text-white hover:bg-[#1AB5A3]",
   };
 
   const sizeClasses = {
@@ -35,11 +35,11 @@ export function PlayStoreButton({
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-2 font-bold transition-all active:scale-[0.97] ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
-      <span className="w-5 h-5 rounded-md bg-[#F4B942] text-[#1A1A1A] flex items-center justify-center shrink-0">
+      <span className="w-5 h-5 rounded-md bg-black/10 flex items-center justify-center shrink-0">
         <Play className="w-3 h-3 fill-current" />
       </span>
       <span>{label}</span>
-      <ArrowUpRight className="w-4 h-4 opacity-60" />
+      <ArrowUpRight className="w-4 h-4 opacity-70" />
     </a>
   );
 }
