@@ -104,11 +104,13 @@ export function PricingSection() {
             </p>
           </div>
 
-          <div className="rounded-2xl bg-white border border-[#E5E5E5] p-4 max-w-sm shadow-sm">
+          <div className="rounded-2xl welcome-offer-card p-4 max-w-sm shadow-sm">
             <div className="flex items-start gap-3">
-              <Info className="w-5 h-5 text-[#0A3D91] shrink-0 mt-0.5" />
-              <p className="text-xs text-[#1A1A1A]/80 leading-relaxed">
-                <strong className="text-[#1A1A1A]">Offre de bienvenue :</strong>{" "}
+              <Info className="w-5 h-5 text-[#1AB5A3] shrink-0 mt-0.5" />
+              <p className="text-xs welcome-offer-text leading-relaxed">
+                <strong className="welcome-offer-text-strong">
+                  Offre de bienvenue :
+                </strong>{" "}
                 5 tirages offerts pour votre première commande, selon les
                 conditions affichées dans l'application.
               </p>

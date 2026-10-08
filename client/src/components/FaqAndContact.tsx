@@ -102,9 +102,9 @@ export function FaqAndContact() {
           </div>
 
           {/* Colonne droite — Contact */}
-          <div className="lg:col-span-5 bg-white border border-[#E5E5E5] rounded-3xl p-6 sm:p-8 space-y-6 shadow-lg">
+          <div className="lg:col-span-5 contact-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-lg">
             <div>
-              <span className="text-xs font-mono text-[#0A3D91] uppercase tracking-widest block mb-1">
+              <span className="text-xs font-mono text-[#1AB5A3] uppercase tracking-widest block mb-1">
                 PICON au Togo
               </span>
               <h3 className="text-2xl font-bold font-display text-[#1A1A1A] mb-2">
@@ -122,7 +122,7 @@ export function FaqAndContact() {
             />
 
             <div className="space-y-3 pt-2 text-xs sm:text-sm">
-              <div className="flex items-center gap-3 p-3 bg-[#F8FAFC] rounded-xl border border-[#E5E5E5]">
+              <div className="flex items-center gap-3 p-3 contact-info-tile rounded-xl">
                 <MapPin className="w-5 h-5 text-[#F4B942] shrink-0" />
                 <div>
                   <div className="font-bold text-[#1A1A1A]">
@@ -133,7 +133,7 @@ export function FaqAndContact() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-3 bg-[#F8FAFC] rounded-xl border border-[#E5E5E5]">
+              <div className="flex items-center gap-3 p-3 contact-info-tile rounded-xl">
                 <Phone className="w-5 h-5 text-emerald-600 shrink-0" />
                 <div>
                   <div className="font-bold text-[#1A1A1A]">
@@ -144,7 +144,7 @@ export function FaqAndContact() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-3 bg-[#F8FAFC] rounded-xl border border-[#E5E5E5]">
+              <div className="flex items-center gap-3 p-3 contact-info-tile rounded-xl">
                 <Mail className="w-5 h-5 text-[#0A3D91] shrink-0" />
                 <div>
                   <div className="font-bold text-[#1A1A1A]">
@@ -175,30 +175,29 @@ export function FaqAndContact() {
                 <div className="text-xs font-semibold text-[#1A1A1A] pt-3">
                   Parler à l'équipe :
                 </div>
-                <Input
-                  required
-                  placeholder="Votre nom complet"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="bg-[#F8FAFC] border-[#E5E5E5] text-[#1A1A1A] text-xs h-10 focus-visible:border-[#0A3D91]"
-                />
-                <Input
-                  required
-                  placeholder="Numéro WhatsApp ou Email"
-                  value={contact}
-                  onChange={(e) => setContact(e.target.value)}
-                  className="bg-[#F8FAFC] border-[#E5E5E5] text-[#1A1A1A] text-xs h-10 font-mono focus-visible:border-[#0A3D91]"
-                />
-                <Textarea
-                  placeholder="Votre question ou projet photo"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="bg-[#F8FAFC] border-[#E5E5E5] text-[#1A1A1A] text-xs min-h-[80px] focus-visible:border-[#0A3D91]"
-                />
+                  <Input
+                    required
+                    placeholder="Votre nom complet"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="contact-input text-xs h-10"
+                  />
+                  <Input
+                    required
+                    placeholder="Numéro WhatsApp ou Email"
+                    value={contact}
+                    onChange={(e) => setContact(e.target.value)}
+                    className="contact-input text-xs h-10 font-mono"
+                  />
+                  <Textarea
+                    placeholder="Votre question ou projet photo"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="contact-input text-xs min-h-[80px]"
+                  />
                 <Button
                   type="submit"
-                  className="w-full bg-[#0A3D91] text-white hover:bg-[#062B66] font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-2"
-                >
+                  className="w-full contact-submit-btn font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-2"                >
                   <Send className="w-3.5 h-3.5" />
                   Envoyer ma question
                 </Button>

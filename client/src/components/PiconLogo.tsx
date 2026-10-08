@@ -6,28 +6,22 @@ interface PiconLogoProps {
 }
 
 const logoSizes = {
-  sm: "w-[96px] sm:w-[104px]",
-  md: "w-[144px] sm:w-[160px]",
-  lg: "w-[192px] sm:w-[224px]",
+  sm: "w-[44px] sm:w-[48px]",
+  md: "w-[56px] sm:w-[60px]",
+  lg: "w-[80px] sm:w-[92px]",
 };
-
 
 const taglineSizes = {
-  sm: "text-[12px]",
-  md: "text-[14px] sm:text-[16px]",
-  lg: "text-[18px] sm:text-[20px]",
+  sm: "text-[7px]",
+  md: "text-[8px] sm:text-[9px]",
+  lg: "text-[10px] sm:text-[11px]",
 };
-
 
 export function PiconLogo({
   className = "",
   size = "md",
   withTagline = true,
-  theme = "dark",
 }: PiconLogoProps) {
-  const taglineColor =
-    theme === "dark" ? "text-white/60" : "text-[#666666]";
-
   return (
     <div className={`flex flex-col items-start gap-1 ${className}`}>
       <img
@@ -37,7 +31,7 @@ export function PiconLogo({
       />
       {withTagline && (
         <span
-          className={`pl-1 font-medium tracking-[0.15em] uppercase ${taglineColor} ${taglineSizes[size]}`}
+          className={`pl-1 font-medium tracking-[0.15em] uppercase logo-tagline ${taglineSizes[size]}`}
         >
           Ce qui compte vraiment
         </span>

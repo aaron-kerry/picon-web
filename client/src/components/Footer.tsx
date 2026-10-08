@@ -21,8 +21,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#0A3D91] text-white pt-16 pb-8 relative overflow-hidden">
-      {/* Halos déco */}
+    <footer className="footer-theme pt-16 pb-8 relative overflow-hidden">
       <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-white/5 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-[#F4B942]/10 blur-3xl pointer-events-none" />
 
@@ -39,7 +38,7 @@ export function Footer() {
                 />
               </div>
               <div>
-                <div className="font-display font-bold text-lg tracking-wider">
+                <div className="font-display font-bold text-lg tracking-wider text-white">
                   PICON
                 </div>
                 <div className="text-[10px] font-mono uppercase tracking-[0.15em] text-[#F4B942]">
@@ -55,21 +54,21 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 aria-label="Facebook"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 aria-label="YouTube"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white"
               >
                 <Youtube className="w-4 h-4" />
               </a>
@@ -237,11 +236,11 @@ export function Footer() {
 
       {/* Bande colorée en bas (identité Picon) */}
       <div className="absolute bottom-0 left-0 right-0 h-1.5 flex">
-        <div className="flex-1 bg-[#F4B942]" />
-        <div className="flex-1 bg-[#00A896]" />
+        <div className="flex-1 bg-[#1AB5A3]" />
+        <div className="flex-1 bg-[#F5D33E]" />
         <div className="flex-1 bg-[#E63946]" />
-        <div className="flex-1 bg-[#7C3AED]" />
-        <div className="flex-1 bg-white" />
+        <div className="flex-1 bg-[#7C4DBC]" />
+        <div className="flex-1 bg-[#4A5DB8]" />
       </div>
     </footer>
   );
