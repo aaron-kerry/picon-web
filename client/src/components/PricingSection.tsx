@@ -206,46 +206,46 @@ export function PricingSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 mt-8">
-          <div className="lg:col-span-7 rounded-2xl border border-[#E5E5E5] bg-white p-5 sm:p-6">
+          <div className="lg:col-span-7 rounded-2xl border border-[#E5E5E5] dark:border-white/10 bg-white dark:bg-[#141519] p-5 sm:p-6">
             <div className="flex items-center gap-3 mb-5">
-              <Clock3 className="w-5 h-5 text-[#0A3D91]" />
+              <Clock3 className="w-5 h-5 text-[#0A3D91] dark:text-[#1AB5A3]" />
               <div>
-                <h3 className="font-bold text-[#1A1A1A]">
+                <h3 className="font-bold text-[#1A1A1A] dark:text-white">
                   Délais de traitement
                 </h3>
-                <p className="text-xs text-[#666666]">
+                <p className="text-xs text-[#666666] dark:text-white/60">
                   À compter de la validation de la commande
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-xl bg-[#F8FAFC] p-4">
-                <div className="text-2xl font-display font-bold text-[#1A1A1A]">
+              <div className="rounded-xl bg-[#F8FAFC] dark:bg-white/5 p-4">
+                <div className="text-2xl font-display font-bold text-[#1A1A1A] dark:text-white">
                   72 h
                 </div>
-                <div className="text-xs text-[#666666] mt-1">
+                <div className="text-xs text-[#666666] dark:text-white/60 mt-1">
                   Standard · livraison sous 3 jours ouvrés
                 </div>
               </div>
               <div className="rounded-xl bg-[#F4B942]/15 border border-[#F4B942]/30 p-4">
-                <div className="text-2xl font-display font-bold text-[#B88000]">
+                <div className="text-2xl font-display font-bold text-[#B88000] dark:text-[#F5D33E]">
                   24 h
                 </div>
-                <div className="text-xs text-[#1A1A1A]/80 mt-1">
+                <div className="text-xs text-[#1A1A1A]/80 dark:text-white/80 mt-1">
                   Express · selon options disponibles
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-5 rounded-2xl border border-[#E5E5E5] bg-white p-5 sm:p-6">
+          <div className="lg:col-span-5 rounded-2xl border border-[#E5E5E5] dark:border-white/10 bg-white dark:bg-[#141519] p-5 sm:p-6">
             <div className="flex items-center gap-3 mb-5">
-              <CreditCard className="w-5 h-5 text-emerald-600" />
+              <CreditCard className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="font-bold text-[#1A1A1A]">
+                <h3 className="font-bold text-[#1A1A1A] dark:text-white">
                   Payez comme vous voulez
                 </h3>
-                <p className="text-xs text-[#666666]">
+                <p className="text-xs text-[#666666] dark:text-white/60">
                   Les options apparaissent dans l'application
                 </p>
               </div>
@@ -256,13 +256,13 @@ export function PricingSection() {
                 return (
                   <div
                     key={method.title}
-                    className="flex items-center gap-3 rounded-xl bg-[#F8FAFC] px-3 py-2.5"
+                    className="flex items-center gap-3 rounded-xl bg-[#F8FAFC] dark:bg-white/5 px-3 py-2.5"
                   >
-                    <Icon className="w-4 h-4 text-emerald-600" />
-                    <span className="text-sm text-[#1A1A1A] font-semibold">
+                    <Icon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                    <span className="text-sm text-[#1A1A1A] dark:text-white font-semibold">
                       {method.title}
                     </span>
-                    <span className="text-xs text-[#666666] ml-auto">
+                    <span className="text-xs text-[#666666] dark:text-white/60 ml-auto">
                       {method.note}
                     </span>
                   </div>
@@ -274,9 +274,24 @@ export function PricingSection() {
 
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl border border-[#F4B942]/30 bg-[#F4B942]/10 p-5 sm:p-6">
           <div className="flex items-start gap-3">
-            <Truck className="w-5 h-5 text-[#B88000] mt-0.5 shrink-0" />
-            <p className="text-sm text-[#1A1A1A]/80 leading-relaxed">
-              <strong className="text-[#1A1A1A]">
+            <Truck className="w-5 h-5 text-[#B88000] dark:text-[#F5D33E] mt-0.5 shrink-0" />
+            <p className="text-sm text-[#1A1A1A]/80 dark:text-white/80 leading-relaxed">
+              <strong className="text-[#1A1A1A] dark:text-white">
+                Besoin d'un format spécifique ?
+              </strong>
+              <br />
+              Contactez l'équipe PICON pour un grand format ou un projet sur
+              mesure.
+            </p>
+          </div>
+          <PlayStoreButton label="Voir les options dans l'app" size="sm" />
+        </div>
+
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl border border-[#F4B942]/30 bg-[#F4B942]/10 dark:bg-[#F4B942]/15 dark:border-[#F4B942]/40 p-5 sm:p-6">
+          <div className="flex items-start gap-3">
+            <Truck className="w-5 h-5 text-[#B88000] dark:text-[#F5D33E] mt-0.5 shrink-0" />
+            <p className="text-sm text-[#1A1A1A] dark:text-white leading-relaxed">
+              <strong className="text-[#1A1A1A] dark:text-white">
                 Besoin d'un format spécifique ?
               </strong>
               <br />

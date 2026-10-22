@@ -525,13 +525,17 @@ h4, h5, h6 {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Textes foncés → clairs */
-.dark .text-\[\#1A1A1A\] {
+/* Textes foncés → clairs (attrape toutes les opacités) */
+.dark [class*="text-[#1A1A1A]"] {
   color: #FFFFFF !important;
 }
 
-.dark .text-\[\#666666\] {
-  color: rgba(255, 255, 255, 0.65) !important;
+.dark [class*="text-[#666666]"] {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark [class*="text-[#1A1A1A]/80"] {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Bordures claires → sombres */
